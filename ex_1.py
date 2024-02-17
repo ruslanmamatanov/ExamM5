@@ -1,5 +1,5 @@
-def tub_bolmagan_generator(N):
-    def tubmi(n):
+def tub_bolmagan_sonlar(N):
+    def tublar(n):
         if n < 2:
             return False
         for i in range(2, int(n**0.5) + 1):
@@ -8,20 +8,20 @@ def tub_bolmagan_generator(N):
         return True
 
     count = 0
-    current_number = 0
+    joriy_son = 0
 
     while count < N:
-        if not tubmi(current_number):
-            yield current_number
+        if not tublar(joriy_son):
+            yield joriy_son
             count += 1
-        current_number += 1
+        joriy_son += 1
 
 
 N = int(input("N ni kiriting: "))
 
 
-gen_obj = tub_bolmagan_generator(N)
+obyekt_g = tub_bolmagan_sonlar(N)
 
 
-for qiymat in gen_obj:
+for qiymat in obyekt_g:
     print(qiymat)
